@@ -1,4 +1,5 @@
 import 'package:election_arena_app/pages/createVote.dart';
+import 'package:election_arena_app/pages/splash.dart';
 import 'package:election_arena_app/theme/theme.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
           title: 'Election Arena',
           debugShowCheckedModeBanner: false,
           theme: darkThemeData(context),
-          home: MyHomePage(),
+          home: SplashPage(),
         );
       }),
     );
@@ -144,7 +145,7 @@ class _MyHomePageState extends State<MyHomePage>
                                     style: TextStyle(color: theme.onBackground),
                                   ),
                                   TextSpan(
-                                    text: 'ElectionArena',
+                                    text: 'Election',
                                     style: TextStyle(color: theme.secondary),
                                   ),
                                   TextSpan(
@@ -363,7 +364,10 @@ class _MyHomePageState extends State<MyHomePage>
                                     child: _isExpanded
                                         ? Container(
                                       decoration: BoxDecoration(
-                                          color: theme.primary),
+                                          color: theme.primary,
+                                          borderRadius: BorderRadius.circular(23)
+                                      ),
+                                      
                                       child: Column(
                                         crossAxisAlignment:
                                         CrossAxisAlignment.center,
@@ -378,6 +382,13 @@ class _MyHomePageState extends State<MyHomePage>
                                               ),
                                             ),
                                           ),
+                                          Divider(
+                                            thickness: 2,
+                                            color: theme.onBackground.withOpacity(0.4),
+                                            indent: 28,
+                                            endIndent: 28,
+                                            height: 2,
+                                          ),
                                           TextButton(
                                             onPressed: () {},
                                             child: Text(
@@ -388,6 +399,13 @@ class _MyHomePageState extends State<MyHomePage>
                                               ),
                                             ),
                                           ),
+                                          Divider(
+                                            thickness: 2,
+                                            color: theme.onBackground.withOpacity(0.4),
+                                            indent: 28,
+                                            endIndent: 28,
+                                            height: 2,
+                                          ),
                                           TextButton(
                                             onPressed: () {},
                                             child: Text(
@@ -397,6 +415,13 @@ class _MyHomePageState extends State<MyHomePage>
                                                 fontSize: 15,
                                               ),
                                             ),
+                                          ),
+                                          Divider(
+                                            thickness: 2,
+                                            color: theme.onBackground.withOpacity(0.4),
+                                            indent: 28,
+                                            endIndent: 28,
+                                            height: 2,
                                           ),
                                           TextButton(
                                             onPressed: () {},
